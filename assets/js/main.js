@@ -54,13 +54,13 @@ formEl.addEventListener('submit', (event) => {
         let percentuale_decimale = percentuale.toFixed(2)
         console.log(percentuale_decimale);
         costoEl.textContent = percentuale_decimale + "€"
-        offertaEl.textContent = 'Biglietto Sconatto del 20%'
+        offertaEl.textContent = 'Biglietto Scontato 20%'
     } else if (age === 'anziano') {
         const percentuale = ((km * 0.21) - ((km * 0.21) * 40 / 100))
         let percentuale_decimale = percentuale.toFixed(2)
         console.log(percentuale_decimale);
         costoEl.textContent = percentuale_decimale + "€"
-        offertaEl.textContent = 'Biglietto Sconatto del 40%'
+        offertaEl.textContent = 'Biglietto Scontato 40%'
     } else {
         const full_price = (km * 0.21)
         let full_price_decimale = full_price.toFixed(2)
