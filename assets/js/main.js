@@ -30,11 +30,13 @@ const nameEl = document.getElementById('name')
 const costoEl = document.getElementById('costo')
 const offertaEl = document.getElementById('offerta')
 const carrozzaEl = document.getElementById('carrozza')
+const codiceEl = document.getElementById('codice')
 //Creo Function Math.Floor(Math.random) per le carrozze
-function getRandomCarrozza(min, max) {
+function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
-let carrozzaRandom = getRandomCarrozza(1, 10)
+let carrozzaRandom = getRandomNumber(1, 10)
+let codiceRandom = getRandomNumber(10000, 99999)
 
 formEl.addEventListener('submit', (event) => {
     event.preventDefault()
@@ -43,6 +45,7 @@ formEl.addEventListener('submit', (event) => {
     const age = ageField.value
     nameEl.textContent = nameField.value
     carrozzaEl.textContent = carrozzaRandom
+    codiceEl.textContent = codiceRandom
     // Creo calcolo  della percentuale in base all'età
     if (age === 'minorenne') {
         const percentuale = ((km * 0.21) - ((km * 0.21) * 20 / 100))
