@@ -43,7 +43,7 @@ let codiceRandom = getRandomNumber(10000, 99999)
 formEl.addEventListener('submit', (event) => {
     event.preventDefault()
     // Creo const km value and age value
-    const km = kmField.value
+    const km = Number(kmField.value)
     const age = ageField.value
     nameEl.textContent = nameField.value
     carrozzaEl.textContent = carrozzaRandom

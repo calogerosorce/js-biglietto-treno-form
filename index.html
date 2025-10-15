@@ -9,28 +9,29 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="bg-secondary-subtle">
     <div class="container text-center">
         <h1>CALCOLA IL PREZZO DEL TUO BIGLIETO</h1>
-        <form action="" id="form">
-            <div class="row align-items-center">
-                <div class="col-3">
-                    <label for="exampleName">Name Cognome</label>
+        <form action="" id="form" class="rounded mb-3 p-3 bg-light shadow">
+            <div class="row align-items-center mb-2">
+                <div class="col-4">
+                    <label for="exampleName" class="h5">Nome Cognome</label>
                     <div>
-                        <input type="text" id="name-field">
+                        <input class="border border-primary" type="text" id="name-field">
                     </div>
                 </div>
-                <div class="col-3">
-                    <label for="exampleKm">km da percorrere</label>
+                <div class="col-4">
+                    <label for="exampleKm" class="h5">km da percorrere</label>
                     <div>
-                        <input type="number" id="km-field">
+                        <input class="border border-primary" type="number" id="km-field">
                     </div>
                 </div>
-                <div class="col-3">
-                    <label for="exampleAge">Fascia d'età</label>
+                <div class="col-4">
+                    <label for="exampleAge" class="h5">Fascia d'età</label>
                     <div>
-                        <select class="form-select" aria-label="Default select example" id="age-field">
-                            <option selected>Open this select menu</option>
+                        <select class="form-select border border-primary" aria-label="Default select example"
+                            id="age-field">
+                            <option selected>Fascia d'età</option>
                             <option value="minorenne">0-17</option>
                             <option value="maggiorenne">18-64</option>
                             <option value="anziano">65></option>
@@ -38,30 +39,30 @@
                     </div>
                 </div>
             </div>
-            <button id="btn">Genera</button>
-            <button>Annulla</button>
+            <button id="btn" class="btn btn-primary">Genera</button>
+            <button class="btn btn-primary">Annulla</button>
         </form>
-        <div class="row align-items-center">
-            <h2>DETTAGLIO PASSEGGERI</h2>
-            <div class="col-4 card-head bg-primary">
-                <h3>NOME PASSEGGERO</h3>
+        <h2 class="align-items-center">DETTAGLIO PASSEGGERI</h2>
+        <div class="row align-items-center shadow bg-light rounded">
+            <div class="col-4 card-head bg-info-subtle">
+                <h3 class="pb-5">NOME PASSEGGERO</h3>
                 <p id="name"></p>
             </div>
             <div class="col-8 d-flex">
                 <div class="col-3">
-                    <h4>Offerta</h4>
+                    <h4 class="pb-5">Offerta</h4>
                     <p id="offerta"></p>
                 </div>
                 <div class="col-3">
-                    <h4>Carrozza</h4>
+                    <h4 class="pb-5">Carrozza</h4>
                     <p id="carrozza"></p>
                 </div>
                 <div class="col-3">
-                    <h4>Codice CP</h4>
+                    <h4 class="pb-5">Codice CP</h4>
                     <p id="codice"></p>
                 </div>
                 <div class="col-3">
-                    <h4>Costo Biglietto</h4>
+                    <h4 class="pb-5">Costo Biglietto</h4>
                     <p id="costo"></p>
                 </div>
             </div>
