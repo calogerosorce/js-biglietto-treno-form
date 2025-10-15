@@ -20,6 +20,8 @@ Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo sti
 
 Nota:
 Se non vi sentite particolarmente creativi, questa potrebbe essere un’implementazione da seguire per il secondo milestone. Potete scegliere di implementare una soluzione completamente diversa oppure simile, ma in ogni caso cercate di farla vostra.
+Tools :
+
 */
 const formEl = document.getElementById('form')
 const nameField = document.getElementById('name-field')
@@ -51,19 +53,19 @@ formEl.addEventListener('submit', (event) => {
         const percentuale = ((km * 0.21) - ((km * 0.21) * 20 / 100))
         let percentuale_decimale = percentuale.toFixed(2)
         console.log(percentuale_decimale);
-        costoEl.textContent = percentuale_decimale
+        costoEl.textContent = percentuale_decimale + "€"
         offertaEl.textContent = 'Biglietto Sconatto del 20%'
     } else if (age === 'anziano') {
         const percentuale = ((km * 0.21) - ((km * 0.21) * 40 / 100))
         let percentuale_decimale = percentuale.toFixed(2)
         console.log(percentuale_decimale);
-        costoEl.textContent = percentuale_decimale
+        costoEl.textContent = percentuale_decimale + "€"
         offertaEl.textContent = 'Biglietto Sconatto del 40%'
     } else {
         const full_price = (km * 0.21)
         let full_price_decimale = full_price.toFixed(2)
         console.log(full_price_decimale);
-        costoEl.textContent = full_price_decimale
+        costoEl.textContent = full_price_decimale + "€"
         offertaEl.textContent = 'Biglietto Standard'
     }
 })
