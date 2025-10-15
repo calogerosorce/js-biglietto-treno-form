@@ -17,19 +17,19 @@
                 <div class="col-3">
                     <label for="exampleName">Name Cognome</label>
                     <div>
-                        <input type="text" id="name">
+                        <input type="text" id="name-field">
                     </div>
                 </div>
                 <div class="col-3">
                     <label for="exampleKm">km da percorrere</label>
                     <div>
-                        <input type="number" id="km">
+                        <input type="number" id="km-field">
                     </div>
                 </div>
                 <div class="col-3">
                     <label for="exampleAge">Fascia d'età</label>
                     <div>
-                        <select class="form-select" aria-label="Default select example" id="age">
+                        <select class="form-select" aria-label="Default select example" id="age-field">
                             <option selected>Open this select menu</option>
                             <option value="minorenne">0-17</option>
                             <option value="maggiorenne">18-64</option>
@@ -39,7 +39,33 @@
                 </div>
             </div>
             <button id="btn">Genera</button>
+            <button>Annulla</button>
         </form>
+        <div class="row align-items-center">
+            <h2>DETTAGLIO PASSEGGERI</h2>
+            <div class="col-4 card-head bg-primary">
+                <h3>NOME PASSEGGERO</h3>
+                <p id="name"></p>
+            </div>
+            <div class="col-8 d-flex">
+                <div class="col-3">
+                    <h4>Offerta</h4>
+                    <p id="offerta"></p>
+                </div>
+                <div class="col-3">
+                    <h4>Carrozza</h4>
+                    <p id="carrozza"></p>
+                </div>
+                <div class="col-3">
+                    <h4>Codice CP</h4>
+                    <p id="codice"></p>
+                </div>
+                <div class="col-3">
+                    <h4>Costo Biglietto</h4>
+                    <p id="costo"></p>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

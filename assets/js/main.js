@@ -22,14 +22,44 @@ Nota:
 Se non vi sentite particolarmente creativi, questa potrebbe essere un’implementazione da seguire per il secondo milestone. Potete scegliere di implementare una soluzione completamente diversa oppure simile, ma in ogni caso cercate di farla vostra.
 */
 const formEl = document.getElementById('form')
-const nameField = document.getElementById('name')
-const kmField = document.getElementById('km')
-const ageField = document.getElementById('age')
-const button = document.getElementById('btn')
+const nameField = document.getElementById('name-field')
+const kmField = document.getElementById('km-field')
+const ageField = document.getElementById('age-field')
+//const button = document.getElementById('btn')
+const nameEl = document.getElementById('name')
+const costoEl = document.getElementById('costo')
+const offertaEl = document.getElementById('offerta')
+//Creo Function Math.Floor(Math.random) per le carrozze
+function getRandomCarrozza(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+let carrozzaRandom = getRandomCarrozza(1, 10)
 
 formEl.addEventListener('submit', (event) => {
     event.preventDefault()
-    console.log(nameField.value);
-    console.log(kmField.value);
-    console.log(ageField.value)
+    // Creo const km value and age value
+    const km = kmField.value
+    const age = ageField.value
+    nameEl.textContent = nameField.value
+
+    // Creo calcolo  della percentuale in base all'età
+    if (age === 'minorenne') {
+        const percentuale = ((km * 0.21) - ((km * 0.21) * 20 / 100))
+        let percentuale_decimale = percentuale.toFixed(2)
+        console.log(percentuale_decimale);
+        costoEl.textContent = percentuale_decimale
+        offertaEl.textContent = 'Biglietto Sconatto del 20%'
+    } else if (age === 'anziano') {
+        const percentuale = ((km * 0.21) - ((km * 0.21) * 40 / 100))
+        let percentuale_decimale = percentuale.toFixed(2)
+        console.log(percentuale_decimale);
+        costoEl.textContent = percentuale_decimale
+        offertaEl.textContent = 'Biglietto Sconatto del 40%'
+    } else {
+        const full_price = (km * 0.21)
+        let full_price_decimale = full_price.toFixed(2)
+        console.log(full_price_decimale);
+        costoEl.textContent = full_price_decimale
+        offertaEl.textContent = 'Biglietto Standard'
+    }
 })
