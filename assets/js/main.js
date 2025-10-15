@@ -21,13 +21,15 @@ Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo sti
 Nota:
 Se non vi sentite particolarmente creativi, questa potrebbe essere un’implementazione da seguire per il secondo milestone. Potete scegliere di implementare una soluzione completamente diversa oppure simile, ma in ogni caso cercate di farla vostra.
 */
-
+const formEl = document.getElementById('form')
 const nameField = document.getElementById('name')
 const kmField = document.getElementById('km')
+const ageField = document.getElementById('age')
 const button = document.getElementById('btn')
 
-button.addEventListener('click', () => {
+formEl.addEventListener('submit', (event) => {
+    event.preventDefault()
     console.log(nameField.value);
     console.log(kmField.value);
-
+    console.log(ageField.value)
 })
