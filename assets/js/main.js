@@ -21,3 +21,13 @@ Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo sti
 Nota:
 Se non vi sentite particolarmente creativi, questa potrebbe essere un’implementazione da seguire per il secondo milestone. Potete scegliere di implementare una soluzione completamente diversa oppure simile, ma in ogni caso cercate di farla vostra.
 */
+
+const nameField = document.getElementById('name')
+const kmField = document.getElementById('km')
+const button = document.getElementById('btn')
+
+button.addEventListener('click', () => {
+    console.log(nameField.value);
+    console.log(kmField.value);
+
+})
